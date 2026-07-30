@@ -1,5 +1,6 @@
 def show(**details):
-    pass
+    for k, w in details.items():
+        print(k, w)
 
 
 show(a=10, b=20, c=30)
