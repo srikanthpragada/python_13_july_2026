@@ -1,4 +1,4 @@
-def ispositive(n):
+def ispositive(n: int) -> bool :
     return n > 0
 
 nums = [-10, 5, 8, -20, 9]

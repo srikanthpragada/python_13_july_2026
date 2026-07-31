@@ -1,4 +1,4 @@
-def count_digits(s):
+def count_digits(s: str) -> int:
     count = 0
     for c in s:
         if c.isdigit():
