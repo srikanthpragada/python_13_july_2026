@@ -5,3 +5,7 @@ def has_space(st):
 
 for name in filter(has_space, names):
     print(name)
+
+# Using lambda
+for name in filter(lambda s : s.find(' ') >= 0, names):
+    print(name)
