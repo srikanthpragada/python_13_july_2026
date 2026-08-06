@@ -16,9 +16,16 @@ class Account:
     def withdraw(self, amount):
         self.balance -= amount
 
+    def __str__(self):
+        return f"{self.acno},{self.ahname},{self.balance}"
+
+    def __eq__(self, other):
+        return self.acno == other.acno
+
 
     # Create an object of Account
 a1 = Account(1, "Gary", 10000)
+print(a1)
 a1.withdraw(2000)
 a1.deposit(5000)
 print(a1.getbalance())

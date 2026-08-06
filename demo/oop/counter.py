@@ -22,11 +22,16 @@ class Counter:
     def __eq__(self, other):
         return self.value == other.value
 
+    def __gt__(self, other):
+        return self.value > other.value
+
 c = Counter(100)
 print(c)  # c.__str__()
 
-c2 = Counter(100)
+c2 = Counter()
 print(c == c2) # c.__eq__(c2)
+
+print(c > c2)
 
 # c.inc()
 # c.inc()
