@@ -12,6 +12,10 @@ class Course:
         self.fee = fee
         self.duration = duration
 
+    @property
+    def netfee(self):
+        return self.fee + self.fee * Course.taxrate // 100
+
     def getnetfee(self):
         return self.fee + self.fee * Course.taxrate // 100
 
@@ -26,8 +30,8 @@ class Course:
         print(f"Duration : {self.duration}")
         print(f"Fee      : {self.fee}")
 
-
 print(Course.gettaxrate())
 c1 = Course('GenAI', 10000)
 c1.show()
 print(c1.getnetfee())
+print(c1.netfee)  # use property
