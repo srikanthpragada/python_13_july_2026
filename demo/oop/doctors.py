@@ -1,4 +1,7 @@
-class Doctor:
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Doctor(ABC):
     def __init__(self, name, mobile, dept):
         self.name = name
         self.mobile = mobile
@@ -9,6 +12,11 @@ class Doctor:
 
     def getmobile(self):
         return self.mobile
+
+    # Abstract method
+    @abstractmethod
+    def getsalary(self):
+        pass
 
 class ResidentDoctor(Doctor):
     def __init__(self, name, mobile, dept, salary):
