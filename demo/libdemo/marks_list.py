@@ -6,7 +6,7 @@ for line in f.readlines():
         continue
 
     name = parts[0]
-    marks = [int(m) for m in parts[1:]]
+    marks = [int(m) for m in parts[1:] if m.isdigit()]
 
     total = sum(marks)
     avg = total / len(marks)
